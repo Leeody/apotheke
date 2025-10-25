@@ -45,6 +45,27 @@ function pop(imageURL, linkURL) {
     if (imageURL) {
         tcMainElement.src = imageURL;
     }
+    
+    // 移除之前的点击事件（避免重复绑定）
+    var tcMain = document.querySelector('.tc-main');
+    var newTcMain = tcMain.cloneNode(true);
+    tcMain.parentNode.replaceChild(newTcMain, tcMain);
+    
+    // 如果有链接，添加点击跳转
+    if (linkURL && linkURL.trim() !== '') {
+        newTcMain.addEventListener('click', function(event) {
+            if (event.target.classList.contains('tc-img')) {
+                window.open(linkURL, '_blank');
+            }
+            event.stopPropagation();
+        });
+    } else {
+        // 没有链接时，只阻止冒泡
+        newTcMain.addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+    }
+    
     toggleClass(".tc-main", "active");
     toggleClass(".tc", "active");
 }
