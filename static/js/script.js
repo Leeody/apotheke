@@ -47,14 +47,6 @@ function pop(imageURL, linkURL) {
     }
     toggleClass(".tc-main", "active");
     toggleClass(".tc", "active");
-
-    // 点击图片跳转到指定链接
-    tcMainElement.onclick = function(event) {
-        event.stopPropagation(); // 防止冒泡影响关闭弹窗
-        if (linkURL) {
-            window.location.href = linkURL;
-        }
-    };
 }
 
 var tc = document.getElementsByClassName('tc');
