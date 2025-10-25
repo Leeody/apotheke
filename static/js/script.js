@@ -52,8 +52,6 @@ function pop(imageURL) {
 var tc = document.getElementsByClassName('tc');
 var tc_main = document.getElementsByClassName('tc-main');
 tc[0].addEventListener('click', function (event) {
-    event.preventDefault();
-    event.stopPropagation();
     pop();
 });
 tc_main[0].addEventListener('click', function (event) {
