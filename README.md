@@ -46,11 +46,3 @@
 - - 替换 SVG 时需去除宽高信息和fill 信息，才能正常使用。
 
 > skills 图标：[skill-icons](https://github.com/tandpfun/skill-icons) 这个开源项目
-
-
-
-- ## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=ZYYO666/homepage&type=Date)](https://star-history.com/#ZYYO666/homepage&Date)
-
-
